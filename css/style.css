@@ -34,7 +34,7 @@ h2{
 
 
 nav li{
-	background-color: #0e4361;
+	background-color: yellow;
 	padding:10px;
 	width:20%;
 	border:1px solid black;
@@ -117,4 +117,12 @@ td{
   
   tbody tr:last-child td:last-child{
     border-bottom-right-radius: 10px;
+  }
+
+  .gallery{
+    /* min-height: 600px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
   }
