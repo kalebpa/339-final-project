@@ -1,5 +1,3 @@
-/*Add padding and margin to space out the page.
-Make the font larger too.*/
 body{
 	margin:1%;
 	padding:1%;
@@ -7,30 +5,48 @@ body{
     font-family: "Lora", sans-serif;
 }
 
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
 
-/*Make the h1 heading bigger with a bold font*/
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
 h1{
 	font-size: 30px; 
 	font-weight: bold;
-    text-align: center;
+  text-align: center;
 }
 
-/*Style the images*/
+
 img{
     height: 200px;
     width:auto;
-    border: 3px solid blue;
+    border: 3px solid #0e4361;
     padding: 25px;
     border-radius: 10px;
     margin: 10px;
 }
 
-/*Make the h2 heading match h1*/
+
 h2{
 	font-size: 2em; 
 	font-weight: bold;
 }
 
+nav{
+  align-content: center;
+}
 
 nav ul{
    text-align: center;
@@ -38,19 +54,24 @@ nav ul{
 }
 
 nav li{
-	background-color: yellow;
+	background-color: #FDFF33;
 	padding:10px;
 	width:auto;
 	border:1px solid black;
     border-radius: 10px;
 	display: block;
-    color: white;
+    color: black;
     text-align: center;
 }
 
 nav li:hover{
     border: 2px dashed black;
-    background-color: ;
+    /* background-color: ; */
+}
+
+.navigation:active{
+  /* color: ; */
+  background-color: gray;
 }
 
 footer{
@@ -64,6 +85,7 @@ td{
     text-align: center;
     padding: 10px;
     border-top: 2px solid black;
+    border-right: 2px solid black;
   }
   
   /*Req 6b*/
@@ -101,6 +123,7 @@ td{
   
   /*Req 7*/
   table{
+      width: auto;
       border: 2px solid #000000;
       margin-left: auto;
       margin-right: auto;
@@ -124,10 +147,39 @@ td{
     border-bottom-right-radius: 10px;
   }
 
+  .container{
+    display: grid;
+    grid-column: auto;
+    align-self: center;
+    justify-items: center;
+  }
+
+  .leader img{
+    align-self: center;
+  }
+
+  figcaption{
+    text-align: center;
+  }
+
   .gallery{
     /* min-height: 600px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: stretch;
+  }
+
+  @media all and (min-width: 880px){
+    nav li{
+      display:inline-block;
+      width: auto;
+    }
+    .container{
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
   }
