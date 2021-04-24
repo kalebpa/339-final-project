@@ -2,7 +2,16 @@ body{
 	margin:1%;
 	padding:1%;
 	font-size:150%;
-    font-family: "Lora", sans-serif;
+  font-family: "Lora", sans-serif;
+  background-image: url("../images/concrete_seamless.png");
+
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a.skip{
@@ -23,9 +32,26 @@ a.skip:focus{
 }
 
 h1{
-	font-size: 30px; 
+	font-size: 45px; 
 	font-weight: bold;
   text-align: center;
+}
+
+.pillar{
+  font-size: 30px;
+}
+
+.club, .mission{
+  font-size: 25px;
+}
+
+#excell, #family, #joy{
+  font-style: italic;
+  font-size: 25px;
+}
+
+.excell, .family, .joy{
+  font-size: 20px;
 }
 
 
@@ -44,8 +70,18 @@ h2{
 	font-weight: bold;
 }
 
+header{
+  background-color: #0e4361;
+  height: 250px;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+}
+
 nav{
   align-content: center;
+  position:relative;
+  top: -50px;
 }
 
 nav ul{
@@ -56,12 +92,20 @@ nav ul{
 nav li{
 	background-color: #FDFF33;
 	padding:10px;
-	width:auto;
+	width:25%;
 	border:1px solid black;
-    border-radius: 10px;
+  border-radius: 10px;
 	display: block;
-    color: black;
-    text-align: center;
+  color: black;
+  text-align: center;
+}
+
+.current:link, .current:visited{
+  background-color: gray;
+  cursor: default;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
 }
 
 nav li:hover{
@@ -69,9 +113,21 @@ nav li:hover{
     /* background-color: ; */
 }
 
-.navigation:active{
-  /* color: ; */
-  background-color: gray;
+
+
+#logo{
+  /*Your code here.*/
+  height: fit-content;
+  background-color: none;
+	padding:none;
+  border: none;
+  margin: none;
+  animation-name: logo_grow;
+  -webkit-animation-name: logo_grow;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
 }
 
 footer{
@@ -168,6 +224,30 @@ td{
     flex-wrap: wrap;
     justify-content: center;
     align-content: stretch;
+  }
+
+  .flip-card-inner {
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
   }
 
   @media all and (min-width: 750px){
